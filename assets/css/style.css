@@ -1,0 +1,112 @@
+/* import fonts & css files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #efeff6;
+    color: #74788d;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.dashboard-wrapper {
+    display: flex;
+}
+
+.sidebar-area {
+    width: 250px;
+    background-color: #242939;
+    position: relative;
+}
+
+.main-content-area {
+    width: 100%;
+}
+
+.navigation-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation-menu ul li {
+    position: relative;
+}
+
+.navigation-menu ul li a {
+    color: #c0c6d1;
+    display: block;
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.navigation-menu ul li a span {
+    margin-left: 10px;
+}
+
+.navigation-menu ul li:hover a,
+.navigation-menu ul li.active a {
+    background: #1f2433;
+    color: #FFFFFF;
+}
+
+.navigation-menu ul li a .fa-angle-right {
+    position: absolute;
+    top: 13px;
+    left: auto;
+    right: 10px;
+    transition: 0.5s;
+}
+
+.navigation-menu ul li.active a .fa-angle-right {
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.treeview .treeview-menu {
+    width: calc(100%);
+    padding-left: 25px;
+    background: #151822;
+}
+
+.treeview .treeview-menu li a {
+    padding: 5px 15px
+}
+
+.treeview:hover .treeview-menu li a,
+.treeview.active .treeview-menu li a {
+    background: none;
+    color: #c0c6d1;
+}
+
+.treeview:hover .treeview-menu li:hover a,
+.treeview.active .treeview-menu li.active a {
+    color: #FFFFFF;
+}
+
+.treeview-menu {
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+.treeview.active .treeview-menu {
+    max-height: 1000px;
+    transition: max-height 1s ease-in;
+}
+
+/* main-content styles */
+.main-content {
+    padding: 10px;
+    min-height: 100vh;
+}
